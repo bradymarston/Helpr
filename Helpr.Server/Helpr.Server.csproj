@@ -9,16 +9,15 @@
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="3.0.0-preview4-19216-03" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview4.19213.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview4.19213.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0-preview3.19153.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-preview4.19213.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview3.19153.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence.csproj" />
     <ProjectReference Include="..\Helpr.Client\Helpr.Client.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Core\Models\" />
   </ItemGroup>
 
 </Project>

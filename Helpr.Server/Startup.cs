@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Helpr.Server.Core.Models;
 using Helpr.Server.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +32,8 @@ namespace Helpr.Server
             services.AddPersistence<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDefaultRepository<Post, ApplicationDbContext>();
 
             services.AddControllers()
                 .AddNewtonsoftJson();
