@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ShadySoft.ControllerErrorHelpers.Extensions.DepedencyInjection;
 using ShadySoft.EntityPersistence;
 
 namespace Helpr.Server
@@ -51,6 +52,8 @@ namespace Helpr.Server
 
             services.AddControllers()
                 .AddNewtonsoftJson();
+
+            services.AddControllerErrorHelpers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
