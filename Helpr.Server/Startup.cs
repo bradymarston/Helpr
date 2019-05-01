@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ShadySoft.Authentication.Extensions.DependencyInjection;
 using ShadySoft.ControllerErrorHelpers.Extensions.DepedencyInjection;
 using ShadySoft.EntityPersistence;
 
@@ -45,10 +46,14 @@ namespace Helpr.Server
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
+                options.SignIn.RequireConfirmedEmail = false;
             })
                 .AddRoles<IdentityRole>()
+                .AddSignInManager()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddShadyAuthentication<ApplicationUser>();
 
             services.AddControllers()
                 .AddNewtonsoftJson();
@@ -72,6 +77,8 @@ namespace Helpr.Server
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
