@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview4-19216-03" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0-preview4-19216-03" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="3.0.0-preview4-19216-03" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview4-19216-03" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview4-19216-03" />
@@ -16,12 +17,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ShadySoft.Authentication\ShadySoft.Authentication\ShadySoft.Authentication.csproj" />
-    <ProjectReference Include="..\..\ShadySoft.ControllerErrorHelpers\ShadySoft.ControllerErrorHelpers\ShadySoft.ControllerErrorHelpers.csproj" />
-    <ProjectReference Include="..\..\ShadySoft.DummyEmailSender\ShadySoft.DummyEmailSender\ShadySoft.DummyEmailSender.csproj" />
-    <ProjectReference Include="..\..\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence.csproj" />
     <ProjectReference Include="..\Helpr.Client\Helpr.Client.csproj" />
     <ProjectReference Include="..\Helpr.Shared\Helpr.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ShadySoft.Authentication">
+      <HintPath>..\..\ShadySoft.Authentication\ShadySoft.Authentication\bin\Release\netcoreapp3.0\ShadySoft.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="ShadySoft.ControllerErrorHelpers">
+      <HintPath>..\..\ShadySoft.ControllerErrorHelpers\ShadySoft.ControllerErrorHelpers\bin\Release\netcoreapp3.0\ShadySoft.ControllerErrorHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="ShadySoft.DummyEmailSender">
+      <HintPath>..\..\ShadySoft.DummyEmailSender\ShadySoft.DummyEmailSender\bin\Release\netcoreapp3.0\ShadySoft.DummyEmailSender.dll</HintPath>
+    </Reference>
+    <Reference Include="ShadySoft.EntityPersistence">
+      <HintPath>..\..\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence\bin\Release\netcoreapp3.0\ShadySoft.EntityPersistence.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
