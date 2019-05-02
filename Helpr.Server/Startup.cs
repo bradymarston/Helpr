@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ShadySoft.Authentication.Extensions.DependencyInjection;
 using ShadySoft.ControllerErrorHelpers.Extensions.DepedencyInjection;
+using ShadySoft.DummyEmailSender.Extensions.DependencyInjection;
 using ShadySoft.EntityPersistence;
 
 namespace Helpr.Server
@@ -32,6 +33,8 @@ namespace Helpr.Server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDummyEmailSender();
+
             services.AddPersistence<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));

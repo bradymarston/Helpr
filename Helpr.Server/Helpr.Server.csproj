@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ShadySoft.Authentication\ShadySoft.Authentication\ShadySoft.Authentication.csproj" />
     <ProjectReference Include="..\..\ShadySoft.ControllerErrorHelpers\ShadySoft.ControllerErrorHelpers\ShadySoft.ControllerErrorHelpers.csproj" />
+    <ProjectReference Include="..\..\ShadySoft.DummyEmailSender\ShadySoft.DummyEmailSender\ShadySoft.DummyEmailSender.csproj" />
     <ProjectReference Include="..\..\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence\ShadySoft.EntityPersistence.csproj" />
     <ProjectReference Include="..\Helpr.Client\Helpr.Client.csproj" />
     <ProjectReference Include="..\Helpr.Shared\Helpr.Shared.csproj" />
